@@ -1,0 +1,140 @@
+\documentclass{resume} % Use the custom resume.cls style
+\input{glyphtounicode}
+\pdfgentounicode=1
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+
+%% for bold :  \textbf{  }
+
+\usepackage[left=0.3 in,top=0.4in,right=0.35 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{SHAIK ARMAAN SHOAIB} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+\address{+91 9652027418 
+\\
+Hyderabad, India} 
+\address{\href{mailto:shaikarmaanshoaib@gmail.com}{shaikarmaanshoaib.com} \\ \href{https://www.linkedin.com/in/armaanshoaib}{LinkedIn} \\ \href{ https://github.com/armaanshoaib/}{GitHub}}  %
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+% \begin{rSection}{OBJECTIVE}
+
+% {Software Engineer with 2+ years of experience in XXX, seeking full-time XXX roles.}
+
+
+% \end{rSection}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Bachelor of Technology (CSE)}, Mahatma Gandhi Institute of Technology \hfill {2021 - 2025}\\
+CGPA : 8.16
+
+{\bf Intermediate (MPC)}, PAGE Junior College \hfill {2019 - 2021}\\
+Score 91.6\%
+
+
+\end{rSection}
+
+
+
+\begin{rSection}{EXPERIENCE}
+
+\textbf{Consulting Intern} \hfill Feb 2025 - Present\\
+Crowe Horwath IT Services LLP \hfill \textit{Hyderabad, India}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Undergoing technical training on \textbf{Microsoft Dynamics 365 ERP} with a focus on Technical Consulting.
+     \item Learning \textbf{X++} programming, \textbf{AOT} (Application Object Tree), Tables, Views, Queries, and Data Entities.
+    \item Working on hands-on exercises related to D365 customization, troubleshooting and integration. 
+ \end{itemize}
+ 
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECTS}
+\vspace{-1.25em}
+
+
+%----------------
+\item 
+\textbf{AI Document Summarizer} \hspace{4px} \href{http://3.108.168.139:5000/}{View Project}
+ \begin{itemize}
+    \itemsep -1pt {} 
+    
+     \item \textbf{Flask} (Python Framework) based web application that summarizes documents such as PDF, DOCX, PPT, TXT Files using Artificial Intelligence.
+     
+     \item Developed using \textbf{Cloudmersive API} to extract content from PDF and \textbf{llama3-8b-8192 AI API} from Groq Platform to summarize the extracted text. 
+     
+    \item Deployed the web app in AWS EC2 Instance. 
+ \end{itemize}
+ \hspace{2.1em} Tech Stack : \textbf{Frontend} : HTML,CSS, JavaScript. \textbf{Backend} : Python 
+ %------------------
+
+
+%-------------------
+\item \textbf{Social Media Video Downloader} \hspace{4px} \href{http://3.108.168.139:8080/VideoDownloader/}{View Project}
+ \begin{itemize}
+    \itemsep -3pt {} 
+    
+     \item Java based social media video downloading web application to download Instagram Reels, YouTube Videos, Facebook Videos.
+
+     \item Developed using \textbf{Instagram Scraper API} and \textbf{SMVD API} from Rapid API Platform to extract the media info such as audio details, video source URL.
+     
+    \item Deployed the web app in AWS EC2 Instance. 
+    
+ \end{itemize}
+  \hspace{2.1em} Tech Stack : \textbf{Frontend} : HTML,CSS, JavaScript. \textbf{Backend} : Python 
+ %-------------------
+
+\end{rSection} 
+
+
+%----------------------------------------------------------------------------------------
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{SKILLS}
+
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+
+Programming & Java, C, C++, Python\\
+Web Development & HTML, CSS, JavaScript\\
+Framework & Flask (Python Web Framework)\\
+Concepts & Data Structures and Algorithms, Git, GitHub\\
+Database & SQL, MongoDB\\
+\end{tabular}\\
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{ACHIEVEMENTS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+
+\textbf{Solved 180+ Problems on LeetCode} \hspace{4px} \href{https://leetcode.com/u/armaanshoaib/}{View LeetCode Profile}
+
+\end{tabular}\\
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
