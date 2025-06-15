@@ -1,9 +1,26 @@
-\documentclass{resume} % Use the custom resume.cls style
+\documentclass[11pt]{resume}% Use the custom resume.cls style
 \input{glyphtounicode}
 \pdfgentounicode=1
 % \usepackage[sfdefault]{noto-sans}
 \usepackage[default]{sourcesanspro}
+%%
+\iffalse
+% IN CASE CONTENT FLOWS TO NEXT PAGE:
+% 1. \itemsep -3pt {} 
+  \setlength\itemsep{0.25em}
+    \setlength\parskip{0em}
+    \setlength\parsep{0em}
 
+% 2. \documentclass[10pt]{resume} % instead of default 11pt or 12pt
+
+% 3. \linespread{0.98} % instead of default 1.0
+
+% 4. \item Built a Flask app to summarize PDF/DOCX/TXT files using Cloudmersive & llama3 APIs; deployed on AWS EC2.
+
+\fi
+
+
+%%
 %% for bold :  \textbf{  }
 
 \usepackage[left=0.3 in,top=0.4in,right=0.35 in,bottom=0.4in]{geometry} % Document margins
@@ -11,10 +28,15 @@
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{SHAIK ARMAAN SHOAIB} % Your name
 % You can merge both of these into a single line, if you do not have a website.
-\address{+91 9652027418 
-\\
+\address{+91 9652027418 |
 Hyderabad, India} 
-\address{\href{mailto:shaikarmaanshoaib@gmail.com}{shaikarmaanshoaib.com} \\ \href{https://www.linkedin.com/in/armaanshoaib}{LinkedIn} \\ \href{ https://github.com/armaanshoaib/}{GitHub}}  %
+\address{\href{mailto:shaikarmaanshoaib@gmail.com}{shaikarmaanshoaib@gmail.com} | \href{https://www.linkedin.com/in/armaanshoaib}{LinkedIn} | 
+\href{ https://github.com/armaanshoaib/}{GitHub} |
+\href{https://leetcode.com/u/armaanshoaib/}{LeetCode}
+}
+
+
+%
 
 \begin{document}
 
@@ -47,13 +69,15 @@ Score 91.6\%
 
 \begin{rSection}{EXPERIENCE}
 
-\textbf{Consulting Intern} \hfill Feb 2025 - Present\\
+\textbf{System Engineering Intern} \hfill Feb 2025 - Present\\
 Crowe Horwath IT Services LLP \hfill \textit{Hyderabad, India}
  \begin{itemize}
-    \itemsep -3pt {} 
-     \item Undergoing technical training on \textbf{Microsoft Dynamics 365 ERP} with a focus on Technical Consulting.
-     \item Learning \textbf{X++} programming, \textbf{AOT} (Application Object Tree), Tables, Views, Queries, and Data Entities.
-    \item Working on hands-on exercises related to D365 customization, troubleshooting and integration. 
+    \itemsep -1pt {} 
+     \item Managed Azure infrastructure: Load Balancers, VMSS, cost analysis, Azure Advisor recommendations to \\ optimize cloud resource usage in collaboration with project managers.
+     \item Handled code merges, deployments, and pipeline executions using \textbf{Azure DevOps} and Lifecycle Services (LCS) in Dynamics 365 F\&O.
+     \item Database backup and refresh operations between Tier-1 and Tier-2 environments in Dynamics 365 F\&O using \textbf{SQL Server Management Studio (SSMS)}.
+
+
  \end{itemize}
  
 
@@ -75,7 +99,7 @@ Crowe Horwath IT Services LLP \hfill \textit{Hyderabad, India}
     
      \item \textbf{Flask} (Python Framework) based web application that summarizes documents such as PDF, DOCX, PPT, TXT Files using Artificial Intelligence.
      
-     \item Developed using \textbf{Cloudmersive API} to extract content from PDF and \textbf{llama3-8b-8192 AI API} from Groq Platform to summarize the extracted text. 
+     \item Developed using \textbf{Cloudmersive API} to extract content from PDF and \textbf{llama3-8b-8192 AI API} from Groq \\ Platform to summarize the extracted text. 
      
     \item Deployed the web app in AWS EC2 Instance. 
  \end{itemize}
@@ -90,9 +114,9 @@ Crowe Horwath IT Services LLP \hfill \textit{Hyderabad, India}
     
      \item Java based social media video downloading web application to download Instagram Reels, YouTube Videos, Facebook Videos.
 
-     \item Developed using \textbf{Instagram Scraper API} and \textbf{SMVD API} from Rapid API Platform to extract the media info such as audio details, video source URL.
+     \item Developed using \textbf{Instagram Scraper API} and \textbf{SMVD API} from Rapid API Platform to extract the media info such as audio details, video source URL and deployed the web app in AWS EC2 Instance.
      
-    \item Deployed the web app in AWS EC2 Instance. 
+     
     
  \end{itemize}
   \hspace{2.1em} Tech Stack : \textbf{Frontend} : HTML,CSS, JavaScript. \textbf{Backend} : Python 
@@ -102,21 +126,25 @@ Crowe Horwath IT Services LLP \hfill \textit{Hyderabad, India}
 
 
 %----------------------------------------------------------------------------------------
-% TECHINICAL STRENGTHS	
+% TECHNICAL STRENGTHS	
 %----------------------------------------------------------------------------------------
+
 
 \begin{rSection}{SKILLS}
 
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 
-Programming & Java, C, C++, Python\\
-Web Development & HTML, CSS, JavaScript\\
-Framework & Flask (Python Web Framework)\\
-Concepts & Data Structures and Algorithms, Git, GitHub\\
+Programming & Java, C, C++, Python,\\
+Web Development & HTML, CSS, JavaScript Flask Framework\\
+Concepts & Data Structures, Git, TFVC, Azure DevOps, Pipelines\\
 Database & SQL, MongoDB\\
+Cloud & AWS, Azure
 \end{tabular}\\
 \end{rSection}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
@@ -125,14 +153,14 @@ Database & SQL, MongoDB\\
 % ACHIEVEMENTS
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{ACHIEVEMENTS}
+% \begin{rSection}{ACHIEVEMENTS}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 
-\textbf{Solved 180+ Problems on LeetCode} \hspace{4px} \href{https://leetcode.com/u/armaanshoaib/}{View LeetCode Profile}
+% \textbf{Solved 180+ Problems on LeetCode} \hspace{4px} \href{https://leetcode.com/u/armaanshoaib/}{View LeetCode Profile}
 
-\end{tabular}\\
-\end{rSection}
+% \end{tabular}\\
+% \end{rSection}
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 
