@@ -1,168 +1,208 @@
-\documentclass[11pt]{resume}% Use the custom resume.cls style
+%-------------------------
+% Resume in Latex
+% Author : Armaan Shoaib
+%------------------------
+
+\documentclass[12pt]{extarticle}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
 \input{glyphtounicode}
-\pdfgentounicode=1
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+ \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
-\usepackage[default]{sourcesanspro}
-%%
-\iffalse
-% IN CASE CONTENT FLOWS TO NEXT PAGE:
-% 1. \itemsep -3pt {} 
-  \setlength\itemsep{0.25em}
-    \setlength\parskip{0em}
-    \setlength\parsep{0em}
+% \usepackage[default]{sourcesanspro}
 
-% 2. \documentclass[10pt]{resume} % instead of default 11pt or 12pt
-
-% 3. \linespread{0.98} % instead of default 1.0
-
-% 4. \item Built a Flask app to summarize PDF/DOCX/TXT files using Cloudmersive & llama3 APIs; deployed on AWS EC2.
-
-\fi
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
 
-%%
-%% for bold :  \textbf{  }
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-\usepackage[left=0.3 in,top=0.4in,right=0.35 in,bottom=0.4in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{SHAIK ARMAAN SHOAIB} % Your name
-% You can merge both of these into a single line, if you do not have a website.
-\address{+91 9652027418 |
-Hyderabad, India} 
-\address{\href{mailto:shaikarmaanshoaib@gmail.com}{shaikarmaanshoaib@gmail.com} | \href{https://www.linkedin.com/in/armaanshoaib}{LinkedIn} | 
-\href{ https://github.com/armaanshoaib/}{GitHub} |
-\href{https://leetcode.com/u/armaanshoaib/}{LeetCode}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
 
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-%
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% two-line project heading (no github link row)
+\newcommand{\resumeProjectHeadingNoLink}[2]{%
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+       \textit{\small#3} & \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage[left=0.3 in,top=0.4in,right=0.35 in,bottom=0.4in]{geometry} % Document margins
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	OBJECTIVE
-%----------------------------------------------------------------------------------------
-
-% \begin{rSection}{OBJECTIVE}
-
-% {Software Engineer with 2+ years of experience in XXX, seeking full-time XXX roles.}
-
-
-% \end{rSection}
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Education}
-
-{\bf Bachelor of Technology (CSE)}, Mahatma Gandhi Institute of Technology \hfill {2021 - 2025}\\
-CGPA : 8.16
-
-{\bf Intermediate (MPC)}, PAGE Junior College \hfill {2019 - 2021}\\
-Score 91.6\%
+%----------HEADING----------
+\begin{center}
+    \textbf{\LARGE  SHAIK ARMAAN SHOAIB} \\ \vspace{4pt}
+    \small +91 9652027418 $|$ \href{mailto:armaanshoaib.as@gmail.com}{armaanshoaib.as@gmail.com} $|$ 
+    \href{https://www.linkedin.com/in/armaanshoaib}{linkedin.com/armaanshoaib} $|$
+    \href{https://github.com/armaanshoaib/}{github.com/armaanshoaib} $|$
+    \href{https://leetcode.com/u/armaanshoaib/}{leetcode.com/armaanshoaib}
+\end{center}
 
 
-\end{rSection}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Mahatma Gandhi Institute of Technology}{Dec 2021 -- Aug 2025}
+      {Bachelor of Technology in Computer Science}{Hyderabad, TG}
+          \resumeItemListStart
+            \resumeItem{CGPA: \textbf{8.16}}
+            \resumeItem{Relevant Coursework: Data Structures and Algorithms, Big Data, DBMS, Machine Learning, Web Development, Computer Networks, Cloud Computing}            
+          \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
 
-\begin{rSection}{EXPERIENCE}
+    \resumeSubheading
+      {System Engineering Intern}{Feb 2025 -- Jul 2025}
+      {Crowe Horwath IT Services LLP}{Hyderabad, TG}
+      \resumeItemListStart
+        \resumeItem{Managed Azure infrastructure: Load balancers, cost analysis, Azure Advisor recommendations to optimize cloud resource usage in collaboration with project managers.}
+        \resumeItem{Executed code merges, multiple daily deployments, and pipeline executions using \textbf{Azure DevOps} and Life-cycle Services (LCS) reducing manual deployment time.}
+        \resumeItem{Database backup and refresh operations between Tier-1 and Tier-2 environments in Dynamics 365 F\&O using \textbf{SQL Server Management Studio (SSMS)} ensuring data consistency.}
+      \resumeItemListEnd
 
-\textbf{System Engineering Intern} \hfill Feb 2025 - Present\\
-Crowe Horwath IT Services LLP \hfill \textit{Hyderabad, India}
- \begin{itemize}
-    \itemsep -1pt {} 
-     \item Managed Azure infrastructure: Load Balancers, VMSS, cost analysis, Azure Advisor recommendations to \\ optimize cloud resource usage in collaboration with project managers.
-     \item Handled code merges, deployments, and pipeline executions using \textbf{Azure DevOps} and Lifecycle Services (LCS) in Dynamics 365 F\&O.
-     \item Database backup and refresh operations between Tier-1 and Tier-2 environments in Dynamics 365 F\&O using \textbf{SQL Server Management Studio (SSMS)}.
+  \resumeSubHeadingListEnd
 
 
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    %— use 2-line heading here so no empty link row shows up —
+    \resumeProjectHeadingNoLink
+      {\textbf{SSL Expiry Monitoring Automation} $|$ \emph{Python, Playwright, Azure Blob Storage, Logic Apps}}
+      {Jun 2025 -- Jul 2025}
+    \resumeItemListStart
+      \resumeItem{Built a distributed SSL- expiry monitoring system that runs a \textbf{Playwright}-powered Python script on weekly basis to access LCS and extract environment \textbf{10+} URLs.}
+      \resumeItem{Results are written as JSON into Azure Blob Storage, then an Azure \textbf{Logic App} parses the data and sends automated email alerts for any certificates expiring within 30 days \textbf{saving hours} of manual work.}
+    \resumeItemListEnd
+
+          
+      \resumeProjectHeading
+          {\textbf{AI Document Summarizer} $|$ \emph{Python, Flask, HTML, CSS, JavaScript}}{ Oct 2024 -- Nov 2024}
+        {%
+    Links: \href{https://github.com/armaanshoaib/AI_PDF_SUMMARIZER}{GitHub} \,|\, 
+    \href{http://3.108.168.139:5000/}{Live Demo}
+  }
+          \resumeItemListStart
+          % \resumeItem{Live demo: \href{http://yourlink}{yourlink} | Code: \href{https://github.com/...}{GitHub}}
+
+            \resumeItem{\textbf{Flask} based web application that summarizes documents such as PDF, DOCX, PPT, TXT Files using Artificial Intelligence.}
+            \resumeItem{Developed using \textbf{Cloudmersive API} to extract content from PDF and \textbf{llama3-8b-8192 AI API} from Groq Platform to summarize the extracted text.}
+            \resumeItem{Deployed the web app in AWS EC2 Instance.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Social Media Video Downloader} $|$ \emph{JSP, HTML, CSS, JavaScript}}{ Sep 2024 -- Oct 2024}
+      {%
+    Links: \href{https://github.com/armaanshoaib/VideoDownloader}{GitHub} \,|\, 
+    \href{http://3.108.168.139:8080/VideoDownloader/index.jsp}{Live Demo}
+  }
+          \resumeItemListStart
+            \resumeItem{Java based social media video downloading web application with dynamic UI to download Instagram Reels, YouTube Videos, Facebook Videos.}
+            \resumeItem{Developed using \textbf{Instagram Scraper API} and \textbf{SMVD API} from Rapid API Platform to extract the media info such as audio details, video source URL and deployed the web app in AWS EC2 Instance.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages: }{Java, Python, C/C++} \\
+     \textbf{Web: }{HTML, CSS, JavaScript, Flask} \\
+     \textbf{DevOps: }{Git, TFVC, Azure DevOps, Pipelines, Logic Apps} \\
+     \textbf{Databases: }{SQL, MongoDB} \\
+     \textbf{Cloud: }{Azure, AWS}
+    }}
  \end{itemize}
- 
-
-\end{rSection} 
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{PROJECTS}
-\vspace{-1.25em}
 
 
-%----------------
-\item 
-\textbf{AI Document Summarizer} \hspace{4px} \href{http://3.108.168.139:5000/}{View Project}
- \begin{itemize}
-    \itemsep -1pt {} 
-    
-     \item \textbf{Flask} (Python Framework) based web application that summarizes documents such as PDF, DOCX, PPT, TXT Files using Artificial Intelligence.
-     
-     \item Developed using \textbf{Cloudmersive API} to extract content from PDF and \textbf{llama3-8b-8192 AI API} from Groq \\ Platform to summarize the extracted text. 
-     
-    \item Deployed the web app in AWS EC2 Instance. 
- \end{itemize}
- \hspace{2.1em} Tech Stack : \textbf{Frontend} : HTML,CSS, JavaScript. \textbf{Backend} : Python 
- %------------------
-
-
-%-------------------
-\item \textbf{Social Media Video Downloader} \hspace{4px} \href{http://3.108.168.139:8080/VideoDownloader/}{View Project}
- \begin{itemize}
-    \itemsep -3pt {} 
-    
-     \item Java based social media video downloading web application to download Instagram Reels, YouTube Videos, Facebook Videos.
-
-     \item Developed using \textbf{Instagram Scraper API} and \textbf{SMVD API} from Rapid API Platform to extract the media info such as audio details, video source URL and deployed the web app in AWS EC2 Instance.
-     
-     
-    
- \end{itemize}
-  \hspace{2.1em} Tech Stack : \textbf{Frontend} : HTML,CSS, JavaScript. \textbf{Backend} : Python 
- %-------------------
-
-\end{rSection} 
-
-
-%----------------------------------------------------------------------------------------
-% TECHNICAL STRENGTHS	
-%----------------------------------------------------------------------------------------
-
-
-\begin{rSection}{SKILLS}
-
-
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-
-Programming & Java, C, C++, Python,\\
-Web Development & HTML, CSS, JavaScript Flask Framework\\
-Concepts & Data Structures, Git, TFVC, Azure DevOps, Pipelines\\
-Database & SQL, MongoDB\\
-Cloud & AWS, Azure
-\end{tabular}\\
-\end{rSection}
-
-
-
-
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-% ACHIEVEMENTS
-%----------------------------------------------------------------------------------------
-
-% \begin{rSection}{ACHIEVEMENTS}
-
-% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-
-% \textbf{Solved 180+ Problems on LeetCode} \hspace{4px} \href{https://leetcode.com/u/armaanshoaib/}{View LeetCode Profile}
-
-% \end{tabular}\\
-% \end{rSection}
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-
-
+%-------------------------------------------
 \end{document}
